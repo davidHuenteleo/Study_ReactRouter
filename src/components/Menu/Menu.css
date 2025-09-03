@@ -1,0 +1,57 @@
+/* Contenedor del menú */
+.menu {
+  background-color: #1f2937; /* gris oscuro */
+  padding: 1rem 2rem;
+  border-bottom: 12px solid #e5e7eb; /* gris claro */
+}
+
+/* Título del menú */
+.menu-title {
+  color: #f9fafb; /* blanco */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Lista del menú */
+.menu-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada item */
+.menu-item {
+  margin: 0;
+}
+
+/* Links por defecto */
+.menu-link {
+  text-decoration: none;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500;
+  color: #60a5fa; /* azul */
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.menu-link:hover {
+  color: #93c5fd; /* azul más claro */
+}
+
+/* Link activo */
+.menu-link.active {
+  color: #ef4444; /* rojo */
+  border-bottom: 2px solid #ef4444;
+  padding-bottom: 0.25rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

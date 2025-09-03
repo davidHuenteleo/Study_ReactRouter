@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import './Menu.css'
 
 const routes = [
   { to: '/', text: 'Home' },
@@ -8,12 +9,13 @@ const routes = [
 
 function Menu() {
   return(
-    <nav>
-      <ul>
+    <nav className="menu">
 
+      <h1 className="menu-title">Menu</h1>
+
+      <ul className='menu-list'>
         {routes.map(route => (
-
-          <li key={route.to}>
+          <li key={route.to} className='menu-item'>
             <NavLink
               style={({ isActive }) => ({
                 color: isActive ? 'red' : 'blue',
@@ -24,7 +26,6 @@ function Menu() {
             </NavLink>  
           </li>
         ))}
-
       </ul>
     </nav>  
   );
